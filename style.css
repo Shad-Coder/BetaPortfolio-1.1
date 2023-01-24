@@ -191,11 +191,13 @@ flex-direction: column;
   animation-duration: 3s;
   animation-iteration-count: infinite;
   position: absolute;
+  display: none;
 }
 @keyframes croog {
 0% {
 opacity: 1;
 top: -10px;
+
 }
 
 28% {
@@ -227,6 +229,7 @@ top: 99px;
 100% {
 top: -10px;
 left: 364px;
+
 }
 }
 header {
@@ -390,6 +393,7 @@ margin-right: 5%;
       animation-duration: 1s;
       animation-delay: 5s;
      }
+
      .firstTitle > div {
      width: 0%;
      height: 4px;
@@ -603,6 +607,7 @@ box-shadow: 0px 5px 10px 2px rgba(9, 9, 9, 0.2) inset;
             margin-top: 20px;
             width: 50px;
             height: 50px;
+            margin-bottom: 25px;
             margin-left: 44%;
             margin-right: 44%;
             transition: ease 0.4s;
@@ -647,7 +652,7 @@ box-shadow: 0px 5px 10px 2px rgba(9, 9, 9, 0.2) inset;
                 
       .cost__title h3 {
         padding-bottom: 8px;
-        font-family: Courier New, monospace;
+      
             }
           .cost__item {
             margin-left: 6.17%;
@@ -1563,16 +1568,16 @@ body.dark-theme {
 background-repeat: no-repeat;
 background-size: 100% 100%;
    animation-name: trans;
-   animation-duration: 2s;
+   animation-duration: 1.5s;
    animation-fill-mode: forwards;
    animation-iteration-count: 1;
-   animation-delay: 0.5;
+   animation-delay: 0.3;
    animation-timing-function: ease-in;
   }
   @keyframes trans {
     0% {
       visibility: hidden;
-      background: rgba(0, 0, 0, 1);
+      background: rgba(0, 0, 0, 0);
      opacity: 0;
      background: url(icons/KK.jpg);
      background-attachment: fixed;
@@ -1580,6 +1585,7 @@ background-size: 100% 100%;
      background-size: 100% 100%;
   
     }
+   
     50% {
       visibility: hidden;
     background-color: #000;
@@ -1840,6 +1846,20 @@ body.dark-theme .croog {
   width: 19px;
   height: 19px;
 }
+body.dark-theme .MapToggle {
+  color: #dad385;
+}
+body.dark-theme .MapToggle1 {
+  color: #dad385;
+}
+body.dark-theme .title__shop {
+  background-color: #242329;
+  color: #dad385;
+  font-size: 20px;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-bottom: 2%;
+}
 @keyframes select {
   0% {
     z-index: 4;
@@ -1906,7 +1926,7 @@ body.dark-theme .croog {
       width: 0%;
       height: 4px;
       background-color: #000;
-      margin-top: 210px;
+     top: 25%;
       right: 37%;
       position: fixed;
       opacity: 0;
@@ -1952,7 +1972,8 @@ body.dark-theme .croog {
       border-left: #302e38 3PX solid;
       border-right: #302e38 3PX solid;
       border-bottom:  #302e38 3PX solid;
-      
+      border-bottom-left-radius: 35px;
+      border-bottom-right-radius: 35px;
     }
     .spanContent {
       left: 13%;
@@ -1971,40 +1992,243 @@ body.dark-theme .croog {
       top: 21.2%;
     }
     .croog {
-      border-radius: 10%;
-      width: 17px;
-      height: 17px;
+      border-radius: 50%;
+      width: 16px;
+      height: 16px;
       z-index: 999;
-      margin-top: -21px;
+      top: -21px;
+      
       left: 28.4%;
       background-color: #221e1a;
       animation-name: croog;
-      animation-duration: 3s;
+      animation-duration: 3.5s;
       animation-iteration-count: infinite;
-     
+     animation-timing-function: linear;
       position: absolute;
     }
     @keyframes croog {
-      0% {
-     transform: translateY(75px);
-      
-      }
-      
-      28% {
-        transform: translateY(75px);
-        transform: translateX(10px);
-      }
-     
-      50% {
-        transform: translateX(100px);
-        transform: translateY(75px);
-      }
-      
-   
-      100% {
-     
-      transform: rotate(500deg);
-      transform: translateY(75px);
-      }
-      }
-    } /* бракую переделать нахер */
+ 0% {
+  top: -10px;
+  transform: rotate(500deg);
+ }
+ 12% {
+  top: 55px;
+  transform: translateX(0px);
+
+ }
+ 25% {
+  top: 80px;
+  transform: translateX(10px);
+
+ }
+ 28% {
+  top: 85px;
+ }
+ 50% {
+  top: 85px;
+
+  transform: translateX(250px);
+ }
+ 
+ 75% {
+  top: 65px;
+  transform: translateX(270px);
+ 
+ }
+
+ 
+ 100% {
+top: -20px;
+transform:rotate(0deg);
+transform: translateX(270px);
+
+ }
+}
+.column__1 {
+  width: 100%;
+
+}
+.column__1 >p {
+  font-size: 17px;
+}
+.column__2 {
+  width: 100%;
+}
+.column__2 >p {
+  font-size: 17px;
+}
+._number {
+  width: 40px;
+  height: 40px;
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+.column__1:hover {
+  background-color: rgba(237, 237, 237, 0.6);
+border-radius: 15px;
+transform: scale(1.13);
+transition: ease 0.4s;
+transform: matrix(3);
+}
+.column__2:hover {
+  background-color: rgba(237, 237, 237, 0.6);
+border-radius: 15px;
+transform: scale(1.13);
+transition: ease 0.4s;
+transform: matrix(3);
+}
+@keyframes marquee {
+  0% {
+    transform: translateX(80%);
+  }
+  100% {
+    transform: translateX(-96.6%); 
+    display: none;
+  }
+}
+.firstTitle >h1 {
+  font-size: 25px;
+  font-weight: bold;
+}
+#Textanim_1 {
+  margin-left: 260px;
+}
+#Textanim_2 {
+  margin-left: 260px;
+}
+#Textanim_3 {
+  margin-left: 260px;
+}
+#Textanim_4 {
+  margin-left: 260px;
+}
+#Textanim_5 {
+  margin-left: 260px;
+}
+#Textanim_6 {
+  margin-left: 260px;
+}
+#Textanim_7 {
+  margin-left: 260px;
+}
+#Textanim_8 {
+  margin-left: 260px;
+  display: none;
+}
+#Textanim_9 {
+  margin-left: 260px;
+  display: none;
+}
+#Textanim_10 {
+  margin-left: 260px;
+  display: none;
+}
+#Textanim_11 {
+  margin-left: 260px;
+  display: none;
+}
+#Textanim_12 {
+  margin-left: 260px;
+  display: none;
+}
+#Textanim_13 {
+  margin-left: 260px;
+  display: none;
+}
+.cost__item {
+  width: 94%;
+  margin-right: 3%;
+  margin-left: 3%;
+   }
+   .cost__item:hover {
+    border-bottom: 3px solid #f4511e;
+    border-top: 2px solid #f4511e;
+    border-left: 2px solid #f4511e;
+    border-right: 2px solid #f4511e;
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    transform: scale(1.1);
+    -webkit-transition: all 0.4s ease;
+    -moz-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+  }
+  .firstTitle >div {
+    display: none;
+  }
+  .title__shop {
+    color: #e4e3e3;
+    background-color: #4c4848;
+    font-size: 20px;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 2%;
+  }
+  .cost__title {
+    color: #e4e3e3;
+    background-color: #4c4848;
+    font-size: 20px;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 2%;
+    
+  }
+  
+  .slider {
+    width: 100%;
+    
+    margin-top: 9%;
+    height: 10%;
+    border-radius: 25px;
+  
+  }
+  .slider__bg {
+    width: 90%;
+    margin-left: 5%;
+    height: 500px;
+  
+    text-align: center;
+    border-radius: 25px;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+  }
+  .slider__bg img {
+    border-radius: 25px;
+    width: 100%;
+    height: 500px;
+    z-index: 1;
+  }
+  .slider h1 {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-align: center;
+    font-size: 25px;
+    text-shadow: -1px 0px -1px #000;
+  }
+  .slider h5 {
+    font-size: 15px;
+  }
+
+.h1 {
+    z-index: 21098345129834;
+    color: #ffffff;
+    text-align: center;
+    padding-bottom: 5%;
+    font-size: 20px;
+  
+    text-shadow: 1px 0px 1px #000;
+}
+.Map >h3 {
+  margin-left: 10%;
+  margin-right: 10%;
+  font-size: 20px;
+}
+.title > h3 {
+  font-size: 15px;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+.d-none {
+  display: block!important;
+}  /* если ты это читаешь то не юзай сраный бутстрап слишком много
+так еще мой дед говорил */
+   }
