@@ -2227,6 +2227,11 @@ transform: matrix(3);
   margin-left: 5%;
   margin-right: 5%;
 }
+.carousel-control-prev-icon, .carousel-control-next-icon {
+  display: none;
+  opacity: 0;
+}
+
 .d-none {
   display: block!important;
 }  /* если ты это читаешь то не юзай сраный бутстрап слишком много
